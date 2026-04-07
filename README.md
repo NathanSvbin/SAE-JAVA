@@ -6,3 +6,5 @@ Notre équipe est constituée de :
 - Ilyes LERZHAL
 - Marwan ELOUADI
 - Nathan SABIN
+- Mathieu FREY
+
