@@ -1,6 +1,6 @@
 # SAE-JAVA
 
-Notre équipe est constituée de :
+Notre équipe est constituée de (102) :
 
 - Tashfeen KAAN
 - Ilyes LERZHAL
