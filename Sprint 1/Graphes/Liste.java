@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Liste {
 
-    private List<String> arcs;
+    private HashMap<String, String> arcs;
     private List<String> sommet = new ArrayList<>();
 
     public Liste() {
-        this.arcs = new ArrayList<>();
+        this.arcs = new HashMap<>();
     }
 
     public void ajouterSommet(String nom) {
@@ -17,16 +17,21 @@ public class Liste {
         }
     }
 
-    public void ajouterArc(String de, String vers) {
+    public void ajouterArc(String de, String vers, String etiquette) {
         if (sommet.contains(de) && sommet.contains(vers)) {
-            if (!arcs.contains(de + "->" + vers)) {
-                arcs.add(de + "->" + vers);
+            if (!arcs.containsKey(de + "->" + vers)) {
+                arcs.put(de + "->" + vers, etiquette);
             }
         }
     }
 
     public boolean getArcs(String de, String vers) {
-        return arcs.contains(de + "->" + vers);
+        return arcs.containsKey(de + "->" + vers);
+    }
+    
+    public String getValeurArcs(String de, String vers) {
+    	assert(getArcs(de, vers));
+    	return arcs.get(de + "->" + vers);
     }
 }
 
