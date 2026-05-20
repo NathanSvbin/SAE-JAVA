@@ -1,8 +1,8 @@
-package Graphes;
+package graphes;
 
 import java.util.*;
 
-public class Liste {
+public class Liste implements IGraphe {
 
     private HashMap<String, String> arcs;
     private List<String> sommet = new ArrayList<>();

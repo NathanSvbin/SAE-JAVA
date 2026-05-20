@@ -1,9 +1,9 @@
-package Graphes;
+package graphes;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Matrice{
+public class Matrice implements IGraphe{
 
     private Map<String, Map<String, String>> arcs;
 
@@ -23,7 +23,7 @@ public class Matrice{
         }
     }
 
-    public boolean getArc(String de, String vers) {
+    public boolean getArcs(String de, String vers) {
         if (arcs.containsKey(de)) {
             return arcs.get(de).containsKey(vers) && arcs.get(de).get(vers) != null;
         }
@@ -31,7 +31,7 @@ public class Matrice{
     }
     
     public String getValeurArcs(String de, String vers) {
-    	assert(getArc(de, vers));
+    	assert(getArcs(de, vers));
     	return arcs.get(de).get(vers);
     }
 }
